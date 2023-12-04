@@ -2,7 +2,7 @@ mod common;
 
 use std::collections::{HashMap, HashSet};
 use common::{split_lines};
-use crate::common::{collect_number, collect_symbol, EIGHT_DIRECTIONS, EngineSchematicInfo, is_in_bound, NumberPosition, SymbolPosition};
+use crate::common::{collect_number, collect_symbol, EIGHT_DIRECTIONS, EngineSchematicInfo, is_in_bound, NumberPosition};
 
 #[allow(dead_code)]
 fn main() {
