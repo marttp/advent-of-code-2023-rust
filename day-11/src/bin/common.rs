@@ -60,8 +60,8 @@ pub fn get_galaxies_info(input: Vec<&str>) -> GalaxyInfo {
         });
     });
 
-    let mut empty_row_list: Vec<usize> = collect_empty_row(&space_observation);
-    let mut empty_column_list: Vec<usize> = collect_empty_column(&space_observation);
+    let empty_row_list: Vec<usize> = collect_empty_row(&space_observation);
+    let empty_column_list: Vec<usize> = collect_empty_column(&space_observation);
 
     GalaxyInfo {
         galaxies,
@@ -72,7 +72,7 @@ pub fn get_galaxies_info(input: Vec<&str>) -> GalaxyInfo {
 
 fn collect_empty_row(space_observation: &Vec<Chars>) -> Vec<usize> {
     let mut empty_row_list: Vec<usize> = Vec::new();
-    space_observation.iter().enumerate().for_each(|(row_idx, mut row)| {
+    space_observation.iter().enumerate().for_each(|(row_idx, row)| {
         if row.clone().all(|col| col == '.') {
             empty_row_list.push(row_idx);
         }
